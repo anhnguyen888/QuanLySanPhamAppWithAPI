@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Confirm Email";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h2 class="card-title text-center">@ViewData["Title"]</h2>
+            </div>
+            <div class="card-body text-center">
+                @if (ViewData["StatusMessage"] != null)
+                {
+                    if (ViewData["IsSuccess"] != null && (bool)ViewData["IsSuccess"])
+                    {
+                        <div class="alert alert-success">
+                            <i class="bi bi-check-circle-fill me-2"></i> @ViewData["StatusMessage"]
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-danger">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i> @ViewData["StatusMessage"]
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="alert alert-success">
+                        <i class="bi bi-check-circle-fill me-2"></i> Thank you for confirming your email.
+                    </div>
+                }
+                <div class="mt-4">
+                    <a asp-action="Login" class="btn btn-primary">Proceed to Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

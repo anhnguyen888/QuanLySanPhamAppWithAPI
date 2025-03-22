@@ -1,0 +1,98 @@
+@model IEnumerable<QuanLySanPhamApp.Models.Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h3 class="mb-0">@ViewData["Title"]</h3>
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle me-2"></i>Create New
+            </a>
+        </div>
+
+        @if (TempData["StatusMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["StatusMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <div class="table-responsive">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.Description)</th>
+                        <th>@Html.DisplayNameFor(model => model.ParentCategory)</th>
+                        <th>@Html.DisplayNameFor(model => model.DisplayOrder)</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td>
+                                @if (string.IsNullOrEmpty(item.Description))
+                                {
+                                    <span class="text-muted">No description</span>
+                                }
+                                else
+                                {
+                                    @(item.Description.Length > 50 ? item.Description.Substring(0, 50) + "..." : item.Description)
+                                }
+                            </td>
+                            <td>
+                                @if (item.ParentCategory != null)
+                                {
+                                    <a asp-action="Details" asp-route-id="@item.ParentCategoryId">@item.ParentCategory.Name</a>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">None</span>
+                                }
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.DisplayOrder)</td>
+                            <td>
+                                @if (item.IsActive)
+                                {
+                                    <span class="badge bg-success">Active</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">Inactive</span>
+                                }
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <a asp-action="Edit" asp-route-id="@item.CategoryId" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-pencil">Edit</i>
+                                    </a>
+                                    <a asp-action="Details" asp-route-id="@item.CategoryId" class="btn btn-info btn-sm">
+                                        <i class="bi bi-info-circle">Detail</i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.CategoryId" class="btn btn-danger btn-sm">
+                                        <i class="bi bi-trash">Delete</i>
+                                    </a>
+                                    <form asp-action="ToggleStatus" asp-route-id="@item.CategoryId" method="post" style="display:inline;">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-sm @(item.IsActive ? "btn-warning" : "btn-success")" 
+                                                title="@(item.IsActive ? "Deactivate" : "Activate")">
+                                            <i class="bi @(item.IsActive ? "bi-toggle-on" : "bi-toggle-off")">on/off</i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

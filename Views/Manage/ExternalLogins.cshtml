@@ -1,0 +1,76 @@
+@model QuanLySanPhamApp.Models.ManageViewModels.ExternalLoginsViewModel
+@{
+    ViewData["Title"] = "Manage External Logins";
+    ViewData["ActivePage"] = ManageNavPages.ExternalLogins;
+}
+
+<h4>@ViewData["Title"]</h4>
+<partial name="_StatusMessage" for="@TempData["StatusMessage"]" />
+
+<div class="row">
+    <div class="col-md-8">
+        @if (Model.CurrentLogins?.Count > 0)
+        {
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title">Registered External Logins</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <tbody>
+                            @foreach (var login in Model.CurrentLogins)
+                            {
+                                <tr>
+                                    <td>
+                                        <i class="bi bi-@login.LoginProvider.ToLower() me-2"></i>
+                                        @login.ProviderDisplayName
+                                    </td>
+                                    <td>
+                                        @if (Model.ShowRemoveButton)
+                                        {
+                                            <form asp-action="RemoveLogin" method="post">
+                                                <input asp-for="@login.LoginProvider" name="LoginProvider" type="hidden" />
+                                                <input asp-for="@login.ProviderKey" name="ProviderKey" type="hidden" />
+                                                <button type="submit" class="btn btn-outline-danger btn-sm" title="Remove this @login.ProviderDisplayName login from your account">
+                                                    <i class="bi bi-trash"></i> Remove
+                                                </button>
+                                            </form>
+                                        }
+                                        else
+                                        {
+                                            <text>None</text>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+        
+        @if (Model.OtherLogins?.Count > 0)
+        {
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h5 class="card-title">Add Another Login Service</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="LinkLogin" method="post" class="form-horizontal">
+                        <div>
+                            <p>Available external login services:</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                @foreach (var provider in Model.OtherLogins)
+                                {
+                                    <button type="submit" class="btn btn-outline-primary" name="provider" value="@provider.Name">
+                                        <i class="bi bi-@provider.Name.ToLower() me-1"></i> @provider.DisplayName
+                                    </button>
+                                }
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,107 @@
+@model QuanLySanPhamApp.Models.Category
+
+@{
+    ViewData["Title"] = "Delete Category";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="bg-light rounded p-4 mb-4">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h3 class="mb-0">Confirm Delete</h3>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left me-2"></i>Back to List
+                    </a>
+                </div>
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="alert alert-danger">
+                    <h4 class="alert-heading">Warning!</h4>
+                    <p>Are you sure you want to delete the category <strong>@Model.Name</strong>?</p>
+                    <hr>
+                    <p class="mb-0">This action cannot be undone.</p>
+                </div>
+
+                @if (Model.ChildCategories != null && Model.ChildCategories.Any())
+                {
+                    <div class="alert alert-warning">
+                        <h5>Cannot delete this category</h5>
+                        <p>This category has <strong>@Model.ChildCategories.Count child categories</strong>. 
+                           You must reassign or delete them first.</p>
+                    </div>
+                }
+
+                @if (Model.Products != null && Model.Products.Any())
+                {
+                    <div class="alert alert-warning">
+                        <h5>Cannot delete this category</h5>
+                        <p>This category has <strong>@Model.Products.Count product(s)</strong> associated with it. 
+                           You must reassign or delete them first.</p>
+                    </div>
+                }
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Category Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Name)</dt>
+                            <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+
+                            <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Description)</dt>
+                            <dd class="col-sm-9">
+                                @if (string.IsNullOrEmpty(Model.Description))
+                                {
+                                    <span class="text-muted">No description</span>
+                                }
+                                else
+                                {
+                                    @Html.DisplayFor(model => model.Description)
+                                }
+                            </dd>
+
+                            <dt class="col-sm-3">Parent Category</dt>
+                            <dd class="col-sm-9">
+                                @if (Model.ParentCategory != null)
+                                {
+                                    @Model.ParentCategory.Name
+                                }
+                                else
+                                {
+                                    <span class="text-muted">None</span>
+                                }
+                            </dd>
+
+                            <dt class="col-sm-3">@Html.DisplayNameFor(model => model.DisplayOrder)</dt>
+                            <dd class="col-sm-9">@Html.DisplayFor(model => model.DisplayOrder)</dd>
+
+                            <dt class="col-sm-3">Status</dt>
+                            <dd class="col-sm-9">
+                                @if (Model.IsActive)
+                                {
+                                    <span class="badge bg-success">Active</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">Inactive</span>
+                                }
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <form asp-action="Delete" method="post">
+                    <input type="hidden" asp-for="CategoryId" />
+                    <button type="submit" class="btn btn-danger" 
+                            @(Model.ChildCategories?.Any() == true || Model.Products?.Any() == true ? "disabled" : "")>
+                        <i class="bi bi-trash me-2"></i>Delete
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+@model QuanLySanPhamApp.Models.Identity.ClaimsManagementViewModel
+
+@{
+    ViewData["Title"] = "Manage User Claims";
+    var userName = ViewBag.UserName;
+}
+
+<h1>@ViewData["Title"]</h1>
+<h4>User: @userName</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">Current Claims</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="ManageClaims" method="post">
+                    <input type="hidden" asp-for="UserId" />
+                    
+                    @if (Model.Claims.Any())
+                    {
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Value</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.Claims.Count; i++)
+                                {
+                                    <tr>
+                                        <td>
+                                            <input type="hidden" asp-for="@Model.Claims[i].Type" />
+                                            @Model.Claims[i].Type
+                                        </td>
+                                        <td>
+                                            <input type="hidden" asp-for="@Model.Claims[i].Value" />
+                                            @Model.Claims[i].Value
+                                        </td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input asp-for="@Model.Claims[i].Delete" class="form-check-input" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p class="text-muted">No claims found for this user.</p>
+                    }
+
+                    <h5 class="mt-4">Add New Claim</h5>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-5">
+                            <label asp-for="NewClaimType" class="form-label">Claim Type</label>
+                            <input asp-for="NewClaimType" class="form-control" />
+                        </div>
+                        <div class="col-md-5">
+                            <label asp-for="NewClaimValue" class="form-label">Claim Value</label>
+                            <input asp-for="NewClaimValue" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <a asp-action="Details" asp-route-id="@Model.UserId" class="btn btn-secondary">Back to Details</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

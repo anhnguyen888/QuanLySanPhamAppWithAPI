@@ -1,0 +1,117 @@
+@model QuanLySanPhamApp.Models.Identity.ApplicationUser
+@{
+    ViewData["Title"] = "Manage Your Account";
+}
+
+<h2>@ViewData["Title"]</h2>
+<partial name="_StatusMessage" for="@TempData["StatusMessage"]" />
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title">Account Menu</h5>
+            </div>
+            <div class="card-body p-0">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a asp-controller="Manage" asp-action="Index" class="btn btn-link w-100 text-start p-1">
+                            <i class="bi bi-person me-2"></i> My Profile
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a asp-controller="Manage" asp-action="ChangePassword" class="btn btn-link w-100 text-start p-1">
+                            <i class="bi bi-key me-2"></i> Change Password
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a asp-controller="Manage" asp-action="TwoFactorAuthentication" class="btn btn-link w-100 text-start p-1">
+                            <i class="bi bi-shield-lock me-2"></i> Two-factor Authentication
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a asp-controller="Manage" asp-action="ExternalLogins" class="btn btn-link w-100 text-start p-1">
+                            <i class="bi bi-box-arrow-in-right me-2"></i> External Logins
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-9">
+        <div class="card shadow-sm">
+            <div class="card-header bg-info text-white">
+                <h5 class="card-title">Account Information</h5>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-3">Username</dt>
+                    <dd class="col-sm-9">@Model.UserName</dd>
+
+                    <dt class="col-sm-3">Email</dt>
+                    <dd class="col-sm-9">
+                        @Model.Email
+                        @if (Model.EmailConfirmed)
+                        {
+                            <span class="badge bg-success ms-2">Verified</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-warning ms-2">Not verified</span>
+                        }
+                    </dd>
+
+                    <dt class="col-sm-3">Full Name</dt>
+                    <dd class="col-sm-9">@Model.FirstName @Model.LastName</dd>
+
+                    @if (Model.DateOfBirth.HasValue)
+                    {
+                        <dt class="col-sm-3">Date of Birth</dt>
+                        <dd class="col-sm-9">@Model.DateOfBirth.Value.ToString("yyyy-MM-dd")</dd>
+                    }
+                </dl>
+
+                <div class="alert alert-info mt-4">
+                    <h6 class="alert-heading"><i class="bi bi-info-circle me-2"></i> Account Security Tips</h6>
+                    <ul class="mb-0">
+                        <li>Use a strong, unique password for your account</li>
+                        <li>Enable two-factor authentication for additional security</li>
+                        <li>Regularly check your account activity</li>
+                        <li>Never share your account credentials with others</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title">Quick Actions</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <a asp-controller="Manage" asp-action="Index" class="btn btn-outline-primary w-100">
+                            <i class="bi bi-pencil-square me-2"></i> Edit Profile
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <a asp-controller="Manage" asp-action="ChangePassword" class="btn btn-outline-primary w-100">
+                            <i class="bi bi-key me-2"></i> Change Password
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <a asp-controller="Manage" asp-action="TwoFactorAuthentication" class="btn btn-outline-primary w-100">
+                            <i class="bi bi-shield-lock me-2"></i> Manage 2FA
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <a asp-controller="Manage" asp-action="ExternalLogins" class="btn btn-outline-primary w-100">
+                            <i class="bi bi-box-arrow-in-right me-2"></i> External Logins
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+@model List<QuanLySanPhamApp.Models.Identity.RoleAssignmentViewModel>
+
+@{
+    ViewData["Title"] = "Manage User Roles";
+    var userName = ViewBag.UserName;
+    var userId = ViewBag.UserId;
+}
+
+<h1>@ViewData["Title"]</h1>
+<h4>User: @userName</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Assign Roles</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="ManageRoles" method="post">
+                    <input type="hidden" name="userId" value="@userId" />
+                    
+                    <div class="list-group mb-3">
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            <div class="list-group-item">
+                                <input type="hidden" asp-for="@Model[i].RoleId" />
+                                <input type="hidden" asp-for="@Model[i].RoleName" />
+                                <input type="hidden" asp-for="@Model[i].Description" />
+                                
+                                <div class="form-check">
+                                    <input asp-for="@Model[i].IsSelected" class="form-check-input" />
+                                    <label class="form-check-label">
+                                        <strong>@Model[i].RoleName</strong>
+                                        @if (!string.IsNullOrEmpty(Model[i].Description))
+                                        {
+                                            <div class="text-muted small">@Model[i].Description</div>
+                                        }
+                                    </label>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <a asp-action="Details" asp-route-id="@userId" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

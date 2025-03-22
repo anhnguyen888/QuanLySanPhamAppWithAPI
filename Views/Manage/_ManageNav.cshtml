@@ -1,0 +1,42 @@
+@{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+}
+
+<ul class="nav nav-pills flex-column">
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" asp-action="Index">
+            <i class="bi bi-person me-2"></i> Profile
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" asp-action="ChangePassword">
+            <i class="bi bi-key me-2"></i> Password
+        </a>
+    </li>
+    @if (hasExternalLogins)
+    {
+        <li class="nav-item">
+            <a class="nav-link @ManageNavPages.ExternalLoginsNavClass(ViewContext)" asp-action="ExternalLogins">
+                <i class="bi bi-box-arrow-in-right me-2"></i> External logins
+            </a>
+        </li>
+    }
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" asp-action="TwoFactorAuthentication">
+            <i class="bi bi-shield-lock me-2"></i> Two-factor authentication
+        </a>
+    </li>
+    @if (User.IsInRole("Admin"))
+    {
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="UserManagement" asp-action="Index">
+                <i class="bi bi-people me-2"></i> Manage Users
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="RoleManagement" asp-action="Index">
+                <i class="bi bi-person-badge me-2"></i> Manage Roles
+            </a>
+        </li>
+    }
+</ul>

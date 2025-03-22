@@ -1,0 +1,174 @@
+@model QuanLySanPhamApp.Models.Category
+
+@{
+    ViewData["Title"] = "Category Details";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="bg-light rounded p-4 mb-4">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h3 class="mb-0">@Model.Name</h3>
+                    <div>
+                        <a asp-action="Edit" asp-route-id="@Model.CategoryId" class="btn btn-primary">
+                            <i class="bi bi-pencil me-2"></i>Edit
+                        </a>
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left me-2"></i>Back to List
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Basic Information</h5>
+                            </div>
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dt class="col-sm-4">@Html.DisplayNameFor(model => model.Name)</dt>
+                                    <dd class="col-sm-8">@Html.DisplayFor(model => model.Name)</dd>
+
+                                    <dt class="col-sm-4">@Html.DisplayNameFor(model => model.Description)</dt>
+                                    <dd class="col-sm-8">
+                                        @if (string.IsNullOrEmpty(Model.Description))
+                                        {
+                                            <span class="text-muted">No description</span>
+                                        }
+                                        else
+                                        {
+                                            @Html.DisplayFor(model => model.Description)
+                                        }
+                                    </dd>
+
+                                    <dt class="col-sm-4">Parent Category</dt>
+                                    <dd class="col-sm-8">
+                                        @if (Model.ParentCategory != null)
+                                        {
+                                            <a asp-action="Details" asp-route-id="@Model.ParentCategoryId">@Model.ParentCategory.Name</a>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">None</span>
+                                        }
+                                    </dd>
+
+                                    <dt class="col-sm-4">@Html.DisplayNameFor(model => model.DisplayOrder)</dt>
+                                    <dd class="col-sm-8">@Html.DisplayFor(model => model.DisplayOrder)</dd>
+
+                                    <dt class="col-sm-4">Status</dt>
+                                    <dd class="col-sm-8">
+                                        @if (Model.IsActive)
+                                        {
+                                            <span class="badge bg-success">Active</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">Inactive</span>
+                                        }
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Child Categories</h5>
+                            </div>
+                            <div class="card-body">
+                                @if (Model.ChildCategories != null && Model.ChildCategories.Any())
+                                {
+                                    <div class="list-group">
+                                        @foreach (var child in Model.ChildCategories.OrderBy(c => c.DisplayOrder))
+                                        {
+                                            <a asp-action="Details" asp-route-id="@child.CategoryId" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                @child.Name
+                                                @if (!child.IsActive)
+                                                {
+                                                    <span class="badge bg-danger">Inactive</span>
+                                                }
+                                            </a>
+                                        }
+                                    </div>
+                                }
+                                else
+                                {
+                                    <p class="text-muted">No child categories</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @if (Model.Products != null && Model.Products.Any())
+                {
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Products in this Category</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>Stock</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var product in Model.Products.Take(10))
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <a asp-controller="Product" asp-action="Details" asp-route-id="@product.ProductId">
+                                                        @product.Name
+                                                    </a>
+                                                </td>
+                                                <td>@product.Price.ToString("C")</td>
+                                                <td>@product.StockQuantity</td>
+                                                <td>
+                                                    @if (product.IsActive)
+                                                    {
+                                                        <span class="badge bg-success">Active</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="badge bg-danger">Inactive</span>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                
+                                @if (Model.Products.Count > 10)
+                                {
+                                    <div class="text-center mt-3">
+                                        <p>Showing 10 of @Model.Products.Count products</p>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Products in this Category</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">No products in this category</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

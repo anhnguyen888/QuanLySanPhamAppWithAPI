@@ -1,0 +1,142 @@
+@model QuanLySanPhamApp.Models.Identity.ApplicationUser
+
+@{
+    ViewData["Title"] = "User Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["StatusMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["StatusMessage"]</div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+<div class="card mb-4">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">User Information</h5>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary btn-sm">Edit</a>
+            <a asp-action="Index" class="btn btn-secondary btn-sm">Back to List</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Username</dt>
+            <dd class="col-sm-9">@Model.UserName</dd>
+
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">@Model.Email</dd>
+
+            <dt class="col-sm-3">First Name</dt>
+            <dd class="col-sm-9">@Model.FirstName</dd>
+
+            <dt class="col-sm-3">Last Name</dt>
+            <dd class="col-sm-9">@Model.LastName</dd>
+
+            <dt class="col-sm-3">Date of Birth</dt>
+            <dd class="col-sm-9">@(Model.DateOfBirth?.ToString("yyyy-MM-dd") ?? "Not set")</dd>
+
+            <dt class="col-sm-3">Account Status</dt>
+            <dd class="col-sm-9">
+                @if (Model.LockoutEnd != null && Model.LockoutEnd > DateTimeOffset.UtcNow)
+                {
+                    <span class="badge bg-danger">Locked until @Model.LockoutEnd?.ToString("yyyy-MM-dd HH:mm")</span>
+                    <form asp-action="UnlockUser" asp-route-id="@Model.Id" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-warning ms-2">Unlock User</button>
+                    </form>
+                }
+                else
+                {
+                    <span class="badge bg-success">Active</span>
+                    <form asp-action="LockUser" asp-route-id="@Model.Id" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger ms-2">Lock User</button>
+                    </form>
+                }
+            </dd>
+
+            <dt class="col-sm-3">Email Confirmed</dt>
+            <dd class="col-sm-9">@(Model.EmailConfirmed ? "Yes" : "No")</dd>
+
+            <dt class="col-sm-3">Created At</dt>
+            <dd class="col-sm-9">@Model.CreatedAt.ToString("yyyy-MM-dd HH:mm")</dd>
+
+            <dt class="col-sm-3">Last Modified</dt>
+            <dd class="col-sm-9">@(Model.LastModifiedAt?.ToString("yyyy-MM-dd HH:mm") ?? "Never")</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Roles</h5>
+                <a asp-action="ManageRoles" asp-route-userId="@Model.Id" class="btn btn-primary btn-sm">Manage Roles</a>
+            </div>
+            <div class="card-body">
+                @if (ViewBag.Roles != null && ((IEnumerable<string>)ViewBag.Roles).Any())
+                {
+                    <ul class="list-group">
+                        @foreach (var role in (IEnumerable<string>)ViewBag.Roles)
+                        {
+                            <li class="list-group-item">@role</li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p class="text-muted">No roles assigned</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Claims</h5>
+                <a asp-action="ManageClaims" asp-route-userId="@Model.Id" class="btn btn-primary btn-sm">Manage Claims</a>
+            </div>
+            <div class="card-body">
+                @if (ViewBag.Claims != null && ((IEnumerable<System.Security.Claims.Claim>)ViewBag.Claims).Any())
+                {
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var claim in (IEnumerable<System.Security.Claims.Claim>)ViewBag.Claims)
+                            {
+                                <tr>
+                                    <td>@claim.Type</td>
+                                    <td>@claim.Value</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="text-muted">No claims assigned</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h5 class="mb-0">Security Options</h5>
+    </div>
+    <div class="card-body">
+        <a asp-action="ResetPassword" asp-route-id="@Model.Id" class="btn btn-warning">Reset Password</a>
+    </div>
+</div>
