@@ -1,0 +1,84 @@
+@model IEnumerable<QuanLySanPhamApp.Models.CartItem>
+
+@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+<h1>Shopping Cart</h1>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (Model != null && Model.Any())
+{
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ProductName</td>
+                            <td>@item.Price.ToString("C0")</td>
+                            <td>
+                                <form asp-action="UpdateQuantity" method="post" class="d-flex align-items-center">
+                                    <input type="hidden" name="id" value="@item.Id" />
+                                    <input type="number" name="quantity" value="@item.Quantity" min="1" class="form-control form-control-sm" style="width: 70px" />
+                                    <button type="submit" class="btn btn-sm btn-outline-primary ms-2">Update</button>
+                                </form>
+                            </td>
+                            <td>@((item.Price * item.Quantity).ToString("C0"))</td>
+                            <td>
+                                <a asp-action="RemoveFromCart" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm">
+                                    <i class="fas fa-trash"></i> Remove
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-end"><strong>Total:</strong></td>
+                        <td><strong>@ViewBag.CartTotal.ToString("C0")</strong></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <a asp-action="Clear" class="btn btn-outline-secondary">Clear Cart</a>
+            <div>
+                <a asp-controller="Product" asp-action="Index" class="btn btn-secondary">Continue Shopping</a>
+                <a href="#" class="btn btn-success">Checkout</a>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-info">
+        Your cart is empty! <a asp-controller="Product" asp-action="Index" class="alert-link">Continue shopping</a>
+    </div>
+}

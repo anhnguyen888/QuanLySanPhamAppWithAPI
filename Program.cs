@@ -158,6 +158,16 @@ builder.Services.AddSession(options =>
     options.Cookie.SameSite = SameSiteMode.Strict;
 });
 
+// Add these services
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+builder.Services.AddScoped<ShoppingCartService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

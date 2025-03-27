@@ -29,3 +29,75 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+.product-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-image {
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+
+.current-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #dc3545;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.discount {
+  color: #dc3545;
+}
+
+.availability {
+  background-color: #fff3cd;
+  padding: 8px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.flame-icon {
+  color: #fd7e14;
+  margin-right: 5px;
+}
+
+.buy-button {
+  background-color: #cfe2ff;
+  color: #0d6efd;
+  border: none;
+  border-radius: 0;
+  padding: 12px 0;
+  font-weight: 500;
+  width: 100%;
+}
+
+.buy-button:hover {
+  background-color: #9ec5fe;
+  color: #0d6efd;
+}
+
+.product-content {
+  flex-grow: 1;
+  padding: 15px;
+}
+
+.product-footer {
+  margin-top: auto;
+}

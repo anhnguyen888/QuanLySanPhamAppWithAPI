@@ -17,7 +17,6 @@ C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\obj\Debug\net9
 C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\obj\Debug\net9.0\scopedcss\bundle\QuanLySanPhamApp.styles.css
 C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\obj\Debug\net9.0\scopedcss\projectbundle\QuanLySanPhamApp.bundle.scp.css
-C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\obj\Debug\net9.0\compressed\7h30ckl0uu-b9sayid5wm.gz
 C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\obj\Debug\net9.0\compressed\q4cm2osrds-61n19gt1b8.gz
 C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\obj\Debug\net9.0\compressed\zbloj1i91y-xtxxf3hu2r.gz
 C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\obj\Debug\net9.0\compressed\aak790d2vl-bqjiyaj88i.gz
@@ -237,3 +236,6 @@ C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\bin\Debug\net9
 C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\obj\Debug\net9.0\QuanLySanPhamApp.sourcelink.json
+C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\obj\Debug\net9.0\compressed\7h30ckl0uu-bkj5amkido.gz
+C:\Users\AnhNguyen\Documents\webs5\newwebbanhang\QuanLySanPhamApp\obj\Debug\net9.0\compressed\k8ogw6bfqk-ywkkukpd6z.gz

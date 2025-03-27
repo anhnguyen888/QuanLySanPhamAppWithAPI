@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\img\\pro.jpg",
+      "PackagePath": "staticwebassets\\img\\pro.jpg"
+    },
+    {
       "Id": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -195,6 +199,10 @@
     {
       "Id": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\lib\\fontawesome\\all.min.css",
+      "PackagePath": "staticwebassets\\lib\\fontawesome\\all.min.css"
     },
     {
       "Id": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",

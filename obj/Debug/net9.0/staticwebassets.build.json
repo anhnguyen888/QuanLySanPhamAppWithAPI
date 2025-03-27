@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q/UCEwScO369YhnM3HgKrW+LPa9dspU061g5hCQoP14=",
+  "Hash": "0Hx2C19gLGSr3qDGf6HgrWcyUdejaNqPDt3iDDwq/cQ=",
   "Source": "QuanLySanPhamApp",
   "BasePath": "_content/QuanLySanPhamApp",
   "Mode": "Default",
@@ -395,12 +395,12 @@
       "OriginalItemSpec": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\7h30ckl0uu-b9sayid5wm.gz",
+      "Identity": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\7h30ckl0uu-bkj5amkido.gz",
       "SourceId": "QuanLySanPhamApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/QuanLySanPhamApp",
-      "RelativePath": "css/site#[.{fingerprint=b9sayid5wm}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=bkj5amkido}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -409,8 +409,8 @@
       "RelatedAsset": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "0suozzrugb",
-      "Integrity": "0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=",
+      "Fingerprint": "i01h7bgi7m",
+      "Integrity": "YhKldnuFwItqh102IKj7s0yMpS5d2TemUqUNn5NEMyE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\css\\site.css"
@@ -834,6 +834,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\k8ogw6bfqk-ywkkukpd6z.gz",
+      "SourceId": "QuanLySanPhamApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/QuanLySanPhamApp",
+      "RelativePath": "lib/fontawesome/all.min#[.{fingerprint=ywkkukpd6z}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\lib\\fontawesome\\all.min.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "tocwfnz5dp",
+      "Integrity": "PaOjFlm5eeldpGP6x5qt0CivlsOzfm0mpyVd06vGn6M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\lib\\fontawesome\\all.min.css"
     },
     {
       "Identity": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\l8g2g9t930-ee0r1s7dh0.gz",
@@ -1417,8 +1438,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b9sayid5wm",
-      "Integrity": "j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=",
+      "Fingerprint": "bkj5amkido",
+      "Integrity": "teu2YWZOCe2EUnJyMQ+jcXnzSlJM4k14+3Wrw7nirFo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1443,6 +1464,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\img\\pro.jpg",
+      "SourceId": "QuanLySanPhamApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\",
+      "BasePath": "_content/QuanLySanPhamApp",
+      "RelativePath": "img/pro#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5uyxookky8",
+      "Integrity": "YxnVMQHLec7YC8sWctvAveWg6Qy+5aIEfrMqsx9fqbM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\pro.jpg"
     },
     {
       "Identity": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\js\\site.js",
@@ -2411,6 +2453,27 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+      "Identity": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\lib\\fontawesome\\all.min.css",
+      "SourceId": "QuanLySanPhamApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\",
+      "BasePath": "_content/QuanLySanPhamApp",
+      "RelativePath": "lib/fontawesome/all.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ywkkukpd6z",
+      "Integrity": "HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\fontawesome\\all.min.css"
+    },
+    {
       "Identity": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
       "SourceId": "QuanLySanPhamApp",
       "SourceType": "Discovered",
@@ -2728,13 +2791,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.b9sayid5wm.css",
-      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\7h30ckl0uu-b9sayid5wm.gz",
+      "Route": "css/site.bkj5amkido.css",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\7h30ckl0uu-bkj5amkido.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003134796238"
+          "Quality": "0.001459854015"
         }
       ],
       "ResponseHeaders": [
@@ -2744,15 +2807,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "684"
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"YhKldnuFwItqh102IKj7s0yMpS5d2TemUqUNn5NEMyE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 01:33:30 GMT"
+          "Value": "Thu, 27 Mar 2025 01:44:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2772,13 +2835,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "W/\"teu2YWZOCe2EUnJyMQ+jcXnzSlJM4k14+3Wrw7nirFo=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "bkj5amkido"
         },
         {
           "Name": "label",
@@ -2786,12 +2849,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-teu2YWZOCe2EUnJyMQ+jcXnzSlJM4k14+3Wrw7nirFo="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css",
+      "Route": "css/site.bkj5amkido.css",
       "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2801,7 +2864,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "667"
+          "Value": "1730"
         },
         {
           "Name": "Content-Type",
@@ -2809,11 +2872,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "\"teu2YWZOCe2EUnJyMQ+jcXnzSlJM4k14+3Wrw7nirFo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 01:33:30 GMT"
+          "Value": "Thu, 27 Mar 2025 01:44:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2823,7 +2886,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "bkj5amkido"
         },
         {
           "Name": "label",
@@ -2831,13 +2894,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-teu2YWZOCe2EUnJyMQ+jcXnzSlJM4k14+3Wrw7nirFo="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css.gz",
-      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\7h30ckl0uu-b9sayid5wm.gz",
+      "Route": "css/site.bkj5amkido.css.gz",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\7h30ckl0uu-bkj5amkido.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2846,7 +2909,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "684"
         },
         {
           "Name": "Content-Type",
@@ -2854,11 +2917,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"YhKldnuFwItqh102IKj7s0yMpS5d2TemUqUNn5NEMyE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 01:33:30 GMT"
+          "Value": "Thu, 27 Mar 2025 01:44:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2876,7 +2939,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "bkj5amkido"
         },
         {
           "Name": "label",
@@ -2884,18 +2947,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y="
+          "Value": "sha256-YhKldnuFwItqh102IKj7s0yMpS5d2TemUqUNn5NEMyE="
         }
       ]
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\7h30ckl0uu-b9sayid5wm.gz",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\7h30ckl0uu-bkj5amkido.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003134796238"
+          "Quality": "0.001459854015"
         }
       ],
       "ResponseHeaders": [
@@ -2905,15 +2968,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "684"
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"YhKldnuFwItqh102IKj7s0yMpS5d2TemUqUNn5NEMyE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 01:33:30 GMT"
+          "Value": "Thu, 27 Mar 2025 01:44:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2933,13 +2996,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "W/\"teu2YWZOCe2EUnJyMQ+jcXnzSlJM4k14+3Wrw7nirFo=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-teu2YWZOCe2EUnJyMQ+jcXnzSlJM4k14+3Wrw7nirFo="
         }
       ]
     },
@@ -2954,7 +3017,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "667"
+          "Value": "1730"
         },
         {
           "Name": "Content-Type",
@@ -2962,11 +3025,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "\"teu2YWZOCe2EUnJyMQ+jcXnzSlJM4k14+3Wrw7nirFo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 01:33:30 GMT"
+          "Value": "Thu, 27 Mar 2025 01:44:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2976,13 +3039,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-teu2YWZOCe2EUnJyMQ+jcXnzSlJM4k14+3Wrw7nirFo="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\7h30ckl0uu-b9sayid5wm.gz",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\7h30ckl0uu-bkj5amkido.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2991,7 +3054,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "684"
         },
         {
           "Name": "Content-Type",
@@ -2999,11 +3062,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"YhKldnuFwItqh102IKj7s0yMpS5d2TemUqUNn5NEMyE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 01:33:30 GMT"
+          "Value": "Thu, 27 Mar 2025 01:44:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3021,7 +3084,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y="
+          "Value": "sha256-YhKldnuFwItqh102IKj7s0yMpS5d2TemUqUNn5NEMyE="
         }
       ]
     },
@@ -3320,6 +3383,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+        }
+      ]
+    },
+    {
+      "Route": "img/pro.5uyxookky8.jpg",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\img\\pro.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33452"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YxnVMQHLec7YC8sWctvAveWg6Qy+5aIEfrMqsx9fqbM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 01:47:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5uyxookky8"
+        },
+        {
+          "Name": "label",
+          "Value": "img/pro.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YxnVMQHLec7YC8sWctvAveWg6Qy+5aIEfrMqsx9fqbM="
+        }
+      ]
+    },
+    {
+      "Route": "img/pro.jpg",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\img\\pro.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33452"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YxnVMQHLec7YC8sWctvAveWg6Qy+5aIEfrMqsx9fqbM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 01:47:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YxnVMQHLec7YC8sWctvAveWg6Qy+5aIEfrMqsx9fqbM="
         }
       ]
     },
@@ -16812,6 +16957,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-ZH6pA6BSx6fuHZvdaKph1DwUJ+VSYilIiEQu8ilnvqk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fontawesome/all.min.css",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\k8ogw6bfqk-ywkkukpd6z.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000044824959"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22308"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PaOjFlm5eeldpGP6x5qt0CivlsOzfm0mpyVd06vGn6M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 01:42:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fontawesome/all.min.css",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\lib\\fontawesome\\all.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "102025"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 01:42:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fontawesome/all.min.css.gz",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\k8ogw6bfqk-ywkkukpd6z.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22308"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PaOjFlm5eeldpGP6x5qt0CivlsOzfm0mpyVd06vGn6M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 01:42:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PaOjFlm5eeldpGP6x5qt0CivlsOzfm0mpyVd06vGn6M="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fontawesome/all.min.ywkkukpd6z.css",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\k8ogw6bfqk-ywkkukpd6z.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000044824959"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22308"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PaOjFlm5eeldpGP6x5qt0CivlsOzfm0mpyVd06vGn6M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 01:42:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ywkkukpd6z"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/fontawesome/all.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fontawesome/all.min.ywkkukpd6z.css",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\wwwroot\\lib\\fontawesome\\all.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "102025"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 01:42:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ywkkukpd6z"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/fontawesome/all.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fontawesome/all.min.ywkkukpd6z.css.gz",
+      "AssetFile": "C:\\Users\\AnhNguyen\\Documents\\webs5\\newwebbanhang\\QuanLySanPhamApp\\obj\\Debug\\net9.0\\compressed\\k8ogw6bfqk-ywkkukpd6z.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22308"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PaOjFlm5eeldpGP6x5qt0CivlsOzfm0mpyVd06vGn6M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 01:42:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ywkkukpd6z"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/fontawesome/all.min.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PaOjFlm5eeldpGP6x5qt0CivlsOzfm0mpyVd06vGn6M="
         }
       ]
     },

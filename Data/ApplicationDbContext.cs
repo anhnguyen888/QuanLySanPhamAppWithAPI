@@ -14,6 +14,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, Applicati
 
     public DbSet<Product> Products { get; set; }
     public DbSet<Category> Categories { get; set; }
+    // We've removed CartItems as it's now managed through session
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

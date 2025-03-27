@@ -7,16 +7,19 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QuanLySanPhamApp.Data;
 using QuanLySanPhamApp.Models;
+using QuanLySanPhamApp.Services;
 
 namespace QuanLySanPhamApp.Controllers
 {
     public class ProductController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly ShoppingCartService _cartService;
 
-        public ProductController(ApplicationDbContext context)
+        public ProductController(ApplicationDbContext context, ShoppingCartService cartService)
         {
             _context = context;
+            _cartService = cartService;
         }
 
         // GET: Product
@@ -56,7 +59,7 @@ namespace QuanLySanPhamApp.Controllers
             return View();
         }
 
- [Authorize(Roles = "Admin, Manager")]
+        [Authorize(Roles = "Admin, Manager")]
         // POST: Product/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -85,7 +88,8 @@ namespace QuanLySanPhamApp.Controllers
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Name", product.CategoryId);
             return View(product);
         }
- [Authorize(Roles = "Admin, Manager")]
+
+        [Authorize(Roles = "Admin, Manager")]
         // GET: Product/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -102,7 +106,8 @@ namespace QuanLySanPhamApp.Controllers
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Name", product.CategoryId);
             return View(product);
         }
- [Authorize(Roles = "Admin, Manager")]
+
+        [Authorize(Roles = "Admin, Manager")]
         // POST: Product/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -138,7 +143,8 @@ namespace QuanLySanPhamApp.Controllers
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Name", product.CategoryId);
             return View(product);
         }
- [Authorize(Roles = "Admin, Manager")]
+
+        [Authorize(Roles = "Admin, Manager")]
         // GET: Product/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -157,7 +163,8 @@ namespace QuanLySanPhamApp.Controllers
 
             return View(product);
         }
- [Authorize(Roles = "Admin, Manager")]
+
+        [Authorize(Roles = "Admin, Manager")]
         // POST: Product/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -170,6 +177,19 @@ namespace QuanLySanPhamApp.Controllers
                 await _context.SaveChangesAsync();
             }
 
+            return RedirectToAction(nameof(Index));
+        }
+
+        // POST: Product/AddToCart/5
+        [HttpPost]
+        public async Task<IActionResult> AddToCart(int id)
+        {
+            var product = await _context.Products.FindAsync(id);
+            if (product != null)
+            {
+                _cartService.AddToCart(product);
+                TempData["Message"] = $"{product.Name} added to cart";
+            }
             return RedirectToAction(nameof(Index));
         }
 
